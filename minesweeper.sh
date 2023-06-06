@@ -62,13 +62,12 @@ while true; do
         echo "Winner"
         break
     fi
-    #
+    
     echo "y x ---------------->"
     minenVerdecken '\*' '?'
     echo
     echo -n "x y?"
     read x y
-# -a "${x}" -lt "${weite}" \
     if [ "${x}" -ge 0 -a "${y}" -ge 0 \
         -a "${y}" -lt "${hoehe}" \
         -a "${x}" -lt "${weite}" \
