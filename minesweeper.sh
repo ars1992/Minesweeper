@@ -45,6 +45,10 @@ weite=${1}
 hoehe=${2}
 anzahlMinen=${3}
 
+if [ -z ${anzahlMinen} ]; then
+    echo "Bitte Parameter Übergeben"
+    echo "./minesweeper.sh [Weite] [Höhe] [Minen]"
+fi
 declare -a minenfeld
 
 for ((i=0; ${i}<${weite}*${hoehe}; i++)) do
