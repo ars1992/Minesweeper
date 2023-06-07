@@ -1,6 +1,6 @@
 !#/bin/bash
-clear
-
+#clear
+#
 function anzahlFragezeichen {
     local IFS=$'\n'
     grep -c "${1}" <<< ${minenfeld[*]}
@@ -46,7 +46,12 @@ weite=${1}
 hoehe=${2}
 anzahlMinen=${3}
 
-if test ${#} -ne 3 ; then
+if [[ ${1} = "-h" ]]; then
+    echo "Brauchen Sie hilfe?"
+    exit 1
+fi
+
+if [ ${#} -ne 3 ]; then
     echo "Bitte Parameter Übergeben"
     echo "./minesweeper.sh [Weite] [Höhe] [Minen]"
     exit 1
