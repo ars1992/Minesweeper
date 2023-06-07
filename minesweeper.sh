@@ -1,4 +1,5 @@
 !#/bin/bash
+clear
 
 function anzahlFragezeichen {
     local IFS=$'\n'
@@ -45,9 +46,10 @@ weite=${1}
 hoehe=${2}
 anzahlMinen=${3}
 
-if [ -z ${anzahlMinen} ]; then
+if test ${#} -ne 3 ; then
     echo "Bitte Parameter Übergeben"
     echo "./minesweeper.sh [Weite] [Höhe] [Minen]"
+    exit 1
 fi
 declare -a minenfeld
 
