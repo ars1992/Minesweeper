@@ -51,6 +51,7 @@ if test ${#} -ne 3 ; then
     echo "./minesweeper.sh [Weite] [Höhe] [Minen]"
     exit 1
 fi
+
 declare -a minenfeld
 
 for ((i=0; ${i}<${weite}*${hoehe}; i++)) do
